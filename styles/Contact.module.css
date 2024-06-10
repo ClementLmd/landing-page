@@ -1,0 +1,53 @@
+.container {
+    max-width: 65vw;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    text-align: center;
+    margin-top: 6rem;
+    color: #fffffff1;
+  }
+  
+  .title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fffffff1;
+  }
+  
+  .contact {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fffffff1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact a {
+    color: #fffffff1;
+  }
+  
+  .contact a:hover {
+    color: #ffffffae;
+  }
+
+  .contact li {
+    list-style: none;
+    padding-left: 5rem;
+  }
+
+  .contact ul {
+    margin: 0.5rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact p {
+    margin: 0.5rem 0;
+  }
+  

@@ -1,0 +1,33 @@
+.navbar {
+    background-color: rgb(19, 27, 41);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navItem {
+    margin: 0 1rem;
+  }
+  
+  .navItem a {
+    color: #fffffff1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navItem a:hover {
+    text-decoration: underline;
+  }
+  

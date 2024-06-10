@@ -1,0 +1,30 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 6rem;
+    color: #fffffff1;
+}
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fffffff1;
+}
+  
+  .paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fffffff1;
+    margin-bottom: 15px;
+  }
+  
