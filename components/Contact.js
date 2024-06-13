@@ -29,10 +29,29 @@ export default function Contact() {
           </p>
           <ul>
             <span>Adresses :</span>
-            <li>5 Rue Fénélon 33000 BORDEAUX</li>
-            <li>13 Rue de Laborde 75008 PARIS</li>
-            <li>65 Rue Reine des Bois 76230 BOIS GUILLAUME</li>
+            <li>5 Rue Fénélon, 33000, BORDEAUX</li>
+            <hr className={styles.divider} />
+            <li>13 Rue de Laborde, 75008, PARIS</li>
+            <hr className={styles.divider} />
+            <li>65 Rue Reine des Bois, 76230, BOIS-GUILLAUME</li>
           </ul>
+        </section>
+        <section className={styles.legalMentions}>
+          <h2>Mentions légales</h2>
+          <p>
+            Le cabinet JP INSURANCE sis 5 Rue Fénélon 33000 Bordeaux est
+            enregistré au RCS BORDEAUX n° 980 140 370, et au registre
+            d'immatriculation d'intermédiaire d'assurance ORIAS sous le
+            n°24000001 (cette immatriculation peut être vérifiée sur le site
+            www.orias.fr).{" "}
+          </p>
+          <p>
+            En cas de réclamation ou de contestation de votre part, nous vous
+            invitons à vous adresser au cabinet ; vous pouvez également
+            contacter l'Autorité de contrôle prudentiel et de Résolution (ACPR)
+            : 61 rue Taitbout 75009 Paris.
+          </p>
+          <p> JP INSURANCE 5 RUE FENELON 33000 BORDEAUX . T 06.84.85.35.28</p>
         </section>
       </main>
     </div>

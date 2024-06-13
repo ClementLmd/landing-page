@@ -5,7 +5,7 @@ import Item from "./Item";
 export default function Particulier() {
   const itemsData = [
     {
-      image: "images/road.jpeg",
+      image: "images/items/road.jpeg",
       title: "Automobile et 2 roues",
       text: `JP Insurance est présent sur tous les types de conducteurs : bon
       conducteur, jeune conducteur, malussé, résilié. Le cabinet est
@@ -15,14 +15,14 @@ export default function Particulier() {
       profil grâce à nos formules au kilomètre.`,
     },
     {
-      image: "images/yacht.jpeg",
+      image: "images/items/yacht.jpeg",
       title: "Plaisance, bateau",
       text: `Semi-rigide, voilier, péniche, nous travaillons avec des compagnies
       répondant aux mieux à vos besoins pour garder l’esprit tranquille
       lors de vos excursions marines.`,
     },
     {
-      image: "images/house.jpeg",
+      image: "images/items/house.jpeg",
       title: "Habitation",
       text: `Peu importe votre type de bien, nous nous adaptons pour trouver
       l’offre qui vous convient le mieux. Nous travaillons ensemble votre
@@ -30,7 +30,7 @@ export default function Particulier() {
       précieux.`,
     },
     {
-      image: "images/stethoscope.jpeg",
+      image: "images/items/stethoscope.jpeg",
       title: "Mutuelle",
       text: `Le cabinet dispose d’un large choix de garanties en complémentaire
       santé. Nous proposons un accompagnement avant la souscription pour
@@ -38,14 +38,14 @@ export default function Particulier() {
       mieux.`,
     },
     {
-      image: "images/glass.jpeg",
+      image: "images/items/glass.jpeg",
       title: "Accidents de la vie",
       text: `La garantie des accidents de la vie est disponible pour intervenir
       sur les conséquences des accidents subies au cours de votre vie
       privée. Notre cabinet dispose d’exemples d’indemnisations précis.`,
     },
     {
-      image: "images/woman.jpeg",
+      image: "images/items/woman.jpeg",
       title: "Assurance emprunteur",
       text: `Il n’a jamais été aussi facile et rapide de changer d’assurances
       emprunteur. Notre cabinet s’occupe de toutes les démarches,
@@ -67,7 +67,7 @@ export default function Particulier() {
   return (
     <div>
       <Head>
-        <title>Particulier - JP Insurance</title>
+        <title>Assurance du Particulier - JP Insurance</title>
         <meta
           name="description"
           content="Découvrez nos solutions d'assurance pour les particuliers."

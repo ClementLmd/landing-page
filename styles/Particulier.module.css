@@ -11,7 +11,8 @@
   
 .items {
   /* container-type: normal; */
-  width: min(100% - 3rem, 800px);
+  /* width: min(100% - 3rem, 800px); */
+  max-width: 90%;
   margin-inline: auto;
   display: flex;
   justify-content: center;
@@ -30,6 +31,7 @@
     font-size: 2rem;
     margin: 1rem;
     color: #fffffff1;
+    text-align: center;
 }
   
   .paragraph {
