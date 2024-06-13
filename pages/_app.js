@@ -5,9 +5,7 @@ import "../styles/globals.css";
 function App({ Component, pageProps }) {
   return (
     <div className="layout">
-      <div className="navbar">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="content">
         <Component {...pageProps} />
       </div>

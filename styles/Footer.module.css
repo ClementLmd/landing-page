@@ -1,13 +1,13 @@
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left:0;
     right:0;
     width: 100%;
-    background-color: rgb(19, 27, 41);
-    color: #fffffff1; /* Couleur du texte */
+    background-color: rgb(19, 27, 41, 0.7);
+    color: #fffffff1;
     text-align: center;
-    padding: 10px 0;
+    padding: 0.1rem 0;
     font-size: 0.7rem;
   }
   

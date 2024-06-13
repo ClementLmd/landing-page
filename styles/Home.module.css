@@ -1,5 +1,6 @@
 .container {
-  max-width: 65vw;
+  max-width: 90%;
+  height:100svh;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -10,22 +11,22 @@
 
 .title {
   text-align: center;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 .title h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #fffffff1;
 }
 
 .title p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #fffffff1;
 }
 
 .cabinetInfo {
-  margin-top: 10vh;
+  margin-top: 1vh;
   /* text-align: center; */
 }
 
@@ -33,7 +34,7 @@
   font-size: 2rem;
   margin-bottom: 20px;
   color: #fffffff1;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .cabinetInfo p {
