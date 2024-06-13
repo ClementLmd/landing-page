@@ -4,10 +4,12 @@
     left:0;
     right:0;
     width: 100%;
-    background-color: rgb(19, 27, 41, 0.7);
+    background-color: rgba(7, 7, 8, 0.697);
     color: #fffffff1;
     text-align: center;
     padding: 0.1rem 0;
     font-size: 0.7rem;
+    border-top: #ffffff8e solid 1px;
+    margin-top: 1rem;
   }
   

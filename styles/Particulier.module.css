@@ -13,7 +13,9 @@
   /* container-type: normal; */
   width: min(100% - 3rem, 800px);
   margin-inline: auto;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -26,13 +28,14 @@
   
   .title {
     font-size: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     color: #fffffff1;
 }
   
   .paragraph {
     font-size: 1.1rem;
     margin: auto;
+    margin-bottom: 1rem;
     padding: 1rem;
     color: #fffffff1;
     align-items: center;
