@@ -44,10 +44,10 @@ export default function Navbar() {
             <Link href="/">Le Cabinet</Link>
           </li>
           <li>
-            <Link href="/particulier">Assurance du Particulier</Link>
+            <Link href="/professionnel">Assurance du Professionnel</Link>
           </li>
           <li>
-            <Link href="/professionnel">Assurance du Professionnel</Link>
+            <Link href="/particulier">Assurance du Particulier</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>

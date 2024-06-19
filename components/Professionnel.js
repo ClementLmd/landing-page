@@ -5,7 +5,7 @@ import Item from "./Item";
 export default function Professionnel() {
   const itemsDataGoods = [
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/responsabilite-civile-pro.png",
       title: "Responsabilité civile",
       text: `La responsabilité civile professionnelle est souvent le « permis de
       travail » de votre activité. Notre cabinet travaille avec plusieurs
@@ -16,23 +16,23 @@ export default function Professionnel() {
       cotisation la plus juste.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/dommage-biens.png",
       title: "Dommages aux biens",
       text: `Protéger le cœur de votre activité est essentiel. Nos offres répondent à un très grand nombre d’activités pour vous protéger en cas de sinistre. Nous vous accompagnons au mieux pour définir ensemble la meilleure offre et vous garantir notamment en perte d’exploitations et bris de machine.
       Commerçant, vous stockez ? Nos contrats s’adaptent à votre activité et aux différences de stock en fonction des évènements.
       Nous intervenons sur tous types de superficies.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/decennale.png",
       title: "Décennale",
-      text: `Créateur ? Résilié ? Jamais assuré ? Nous définissons ensemble la
+      text: `Déjà installé ? Créateur ? Résilié ? Jamais assuré ? Nous définissons ensemble la
             meilleure offre pour garantir votre activité et permettre son
             développement. Nos compagnies s’adaptent en fonction de chaque
             profil et des activités exercées. Nous construisons ensemble votre
             étude pour avoir la meilleure offre.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/protection-juridique.jpg",
       title: "Protection juridique",
       text: `Ne laissez pas les litiges empêcher le développement de votre
       activité, déléguez ; la protection juridique vous accompagne dès la
@@ -41,20 +41,20 @@ export default function Professionnel() {
       solutions prêtes à vous soulager.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/flotte-auto.jpg",
       title: "Flotte automobile",
       text: `Propre compte, transport public de marchandises TPM, nos offres
       flotte automobile couvrent toutes les activités à partir de 5
       véhicules. Nous construisons ensemble votre projet.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/risques-speciaux.jpg",
       title: "Risques spéciaux",
       text: `Evènement, spectacle, exposition ? Nous travaillons avec les
       compagnies spécialisées dans vos activités.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/garage.jpg",
       title: "Garage",
       text: `Négociant ? Réparateur ? Nos offres répondent à votre activité et à
       sa protection.`,
@@ -63,7 +63,7 @@ export default function Professionnel() {
 
   const itemsDataProtection = [
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/mutuelle.jpg",
       title: "Mutuelle",
       text: `Nos complémentaires santé répondent au dispositif Madelin. Nous
       proposons un accompagnement avant la souscription pour cibler et
@@ -72,7 +72,7 @@ export default function Professionnel() {
       Votre complémentaire santé est sur mesure.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/prevoyance.jpg",
       title: "Prévoyance",
       text: `Qu’arrive-t-il en cas d’arrêt de votre activité à la suite d’une
       maladie, incapacité, invalidité pour vos revenus ? Comment sont
@@ -81,7 +81,7 @@ export default function Professionnel() {
       stable avec un contrat sur-mesure.`,
     },
     {
-      image: "images/items/road.jpeg",
+      image: "images/items/assurance-collective.jpg",
       title: "Assurance collective",
       text: `Notre cabinet est disposé à répondre aux exigences des conventions
       collectives. Ensemble nous construisons votre offre. Vous soulager

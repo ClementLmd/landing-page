@@ -7,7 +7,7 @@ width:50%;
 height:50svh;
 margin: 1rem 0;
 padding: 0.3rem; */
-background-color: rgba(83, 83, 83, 0.284); 
+background-color: rgba(41, 122, 193, 0.586); 
 border-radius: 0.5rem;
 /* border: 5px dotted red; */
 width: 27svh;
@@ -26,7 +26,7 @@ flex-grow: 0;
 
 .image {
     width: 100%;
-    height: 150px; 
+    height: 180px; 
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -54,6 +54,6 @@ text-align: center;
 
 @media screen and (max-width: 865px) {
 .item {
-    width:60vw;
+    width:70vw;
 }
 }
