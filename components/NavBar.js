@@ -6,7 +6,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(menuOpen);
 
   const openMenu = () => {
     setMenuOpen(!menuOpen);
@@ -35,7 +34,12 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <img className={styles.logo} href="/" src="/images/logo.jpg"></img>
+      <img
+        className={styles.logo}
+        href="/"
+        src="/images/logo.jpg"
+        alt="logo"
+      ></img>
       <div className={styles.menuItems}>
         <ul onClick={openMenu} className={menuOpen ? `${styles.active}` : ""}>
           <li>

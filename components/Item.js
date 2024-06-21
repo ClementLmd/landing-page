@@ -7,7 +7,6 @@ export default function Item(props) {
         className={styles.image}
         style={{ backgroundImage: `url(${props.image})` }}
       ></div>
-      {/* <img className={styles.image} src={props.image}></img> */}
       <div className={styles.title}>{props.title}</div>
       <div className={styles.text}>{props.text}</div>
     </div>
