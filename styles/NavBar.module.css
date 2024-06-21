@@ -1,4 +1,3 @@
-/* Styles pour la barre de navigation normale */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,14 +18,11 @@
     color: #fffffff1;
     justify-content: flex-start;
     flex:1;
-    /* max-width: 30vw;  */
   }
 
-  /* .menuItems {
-    flex: 2;
-    /* display: flex; */
-    /* justify-content: flex-start; 
-  } */
+  .logo {
+    height:50px;
+  }
 
   .navbar ul {
     list-style-type: none;

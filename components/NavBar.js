@@ -35,9 +35,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <h1>
-        <Link href="/">JP Insurance</Link>
-      </h1>
+      <img className={styles.logo} href="/" src="/images/logo.jpg"></img>
       <div className={styles.menuItems}>
         <ul onClick={openMenu} className={menuOpen ? `${styles.active}` : ""}>
           <li>

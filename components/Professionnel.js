@@ -16,7 +16,7 @@ export default function Professionnel() {
       cotisation la plus juste.`,
     },
     {
-      image: "images/items/dommage-biens.png",
+      image: "images/items/dommage-biens.jpg",
       title: "Dommages aux biens",
       text: `Protéger le cœur de votre activité est essentiel. Nos offres répondent à un très grand nombre d’activités pour vous protéger en cas de sinistre. Nous vous accompagnons au mieux pour définir ensemble la meilleure offre et vous garantir notamment en perte d’exploitations et bris de machine.
       Commerçant, vous stockez ? Nos contrats s’adaptent à votre activité et aux différences de stock en fonction des évènements.
