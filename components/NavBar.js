@@ -34,12 +34,9 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <img
-        className={styles.logo}
-        href="/"
-        src="/images/logo.jpg"
-        alt="logo"
-      ></img>
+      <a href="/">
+        <img className={styles.logo} src="/images/logo.jpg" alt="logo"></img>
+      </a>
       <div className={styles.menuItems}>
         <ul onClick={openMenu} className={menuOpen ? `${styles.active}` : ""}>
           <li>
