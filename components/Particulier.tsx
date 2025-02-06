@@ -72,7 +72,7 @@ export default function Particulier() {
           name="description"
           content="Découvrez nos solutions d'assurance pour les particuliers."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.container}>

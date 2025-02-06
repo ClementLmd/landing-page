@@ -10,7 +10,7 @@ export default function Home() {
           name="description"
           content="Découvrez le cabinet JP Insurance et ses services d'assurance."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.container}>

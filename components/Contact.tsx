@@ -10,7 +10,7 @@ export default function Contact() {
           name="description"
           content="Informations de contact du cabinet JP Insurance"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.container}>

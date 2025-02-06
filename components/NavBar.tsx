@@ -11,10 +11,10 @@ export default function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = (event: MouseEvent) => {
     if (
-      !event.target.closest(`.${styles.menuItems}`) &&
-      !event.target.closest(`.${styles.burger}`)
+      !(event.target as Element).closest(`.${styles.menuItems}`) &&
+      !(event.target as Element).closest(`.${styles.burger}`)
     ) {
       setMenuOpen(false);
     }

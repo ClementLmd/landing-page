@@ -1,6 +1,10 @@
 import styles from "../styles/Item.module.css";
 
-export default function Item(props) {
+export default function Item(props: {
+  image: string;
+  title: string;
+  text: string;
+}) {
   return (
     <div className={styles.item}>
       <div

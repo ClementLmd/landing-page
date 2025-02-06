@@ -122,7 +122,7 @@ export default function Professionnel() {
           name="description"
           content="Découvrez nos solutions d'assurance pour les professionnels."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.container}>
