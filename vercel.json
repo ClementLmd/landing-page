@@ -1,11 +1,3 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": true,
-      "develop": true,
-      "preview/*": {
-        "public": true
-      }
-    }
-  }
+  "public": true
 }
