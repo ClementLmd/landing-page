@@ -1,23 +1,23 @@
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Cabinet Assurance",
-  description: "Cabinet de courtage en assurance",
-  icons: {
-    icon: "/images/logo.jpg",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "Cabinet Assurance",
-    description: "Cabinet de courtage en assurance",
-    images: ["/images/logo.jpg"],
-    type: "website",
-  },
-};
+import Footer from "../components/Footer";
+import Navbar from "../components/NavBar";
+import "../styles/globals.css";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="fr">
+      <body>
+        <div className="layout">
+          <Navbar />
+          <div className="content">{children}</div>
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
+}

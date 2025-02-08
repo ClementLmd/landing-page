@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "../styles/Professionnel.module.css";
 import Item from "./Item";
 
@@ -116,15 +115,6 @@ export default function Professionnel() {
 
   return (
     <div>
-      <Head>
-        <title>Assurance du Professionnel - JP Insurance</title>
-        <meta
-          name="description"
-          content="Découvrez nos solutions d'assurance pour les professionnels."
-        />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <main className={styles.container}>
         <section className={styles.section}>
           <h2 className={styles.title}>Protéger vos biens</h2>

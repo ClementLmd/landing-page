@@ -1,18 +1,8 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Le Cabinet - JP Insurance</title>
-        <meta
-          name="description"
-          content="Découvrez le cabinet JP Insurance et ses services d'assurance."
-        />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <main className={styles.container}>
         <section className={styles.title}>
           <h1>Prêt à économiser sur vos assurances ?</h1>

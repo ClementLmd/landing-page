@@ -1,4 +1,4 @@
-import Professionnel from "../components/Professionnel";
+import Professionnel from "components/Professionnel";
 
 function ProfessionnelPage() {
   return <Professionnel />;

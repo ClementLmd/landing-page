@@ -1,40 +1,54 @@
-import Head from "next/head";
 import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
+  const addresses = [
+    {
+      city: "BORDEAUX",
+      address: "5 Rue Fénélon",
+      postal: "33000",
+    },
+    {
+      city: "PARIS",
+      address: "13 Rue de Laborde",
+      postal: "75008",
+    },
+    {
+      city: "BOIS-GUILLAUME",
+      address: "65 Rue Reine des Bois",
+      postal: "76230",
+    },
+  ];
+
   return (
     <div>
-      <Head>
-        <title>Contact - JP Insurance</title>
-        <meta
-          name="description"
-          content="Informations de contact du cabinet JP Insurance"
-        />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <main className={styles.container}>
         <section className={styles.title}>
           <h1>Contactez-nous</h1>
         </section>
 
         <section className={styles.contact}>
-          <p>
-            <span>Téléphone : </span>
+          <div className={styles.contactItem}>
+            <span className={styles.label}>Téléphone :</span>
             <a href="tel:+33684853528">06 84 85 35 28</a>
-          </p>
-          <p>
-            <span>Email : </span>
+          </div>
+
+          <div className={styles.contactItem}>
+            <span className={styles.label}>Email :</span>
             <a href="mailto:contact@jpassurances.fr">contact@jpassurances.fr</a>
-          </p>
-          <ul>
-            <span>Adresses :</span>
-            <li>5 Rue Fénélon, 33000, BORDEAUX</li>
-            <hr className={styles.divider} />
-            <li>13 Rue de Laborde, 75008, PARIS</li>
-            <hr className={styles.divider} />
-            <li>65 Rue Reine des Bois, 76230, BOIS-GUILLAUME</li>
-          </ul>
+          </div>
+
+          <div className={styles.addressSection}>
+            <h2 className={styles.addressTitle}>Nos bureaux</h2>
+            <div className={styles.addressGrid}>
+              {addresses.map((addr, index) => (
+                <div key={index} className={styles.addressCard}>
+                  <h3>{addr.city}</h3>
+                  <p>{addr.address}</p>
+                  <p>{addr.postal}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
         <section className={styles.legalMentions}>
           <h2>Mentions légales</h2>
@@ -51,7 +65,7 @@ export default function Contact() {
             contacter l'Autorité de contrôle prudentiel et de Résolution (ACPR)
             : 61 rue Taitbout 75009 Paris.
           </p>
-          <p> JP INSURANCE 5 RUE FENELON 33000 BORDEAUX . T 06.84.85.35.28</p>
+          <p> JP INSURANCE 5 RUE FENELON 33000 BORDEAUX 06.84.85.35.28</p>
         </section>
       </main>
     </div>
