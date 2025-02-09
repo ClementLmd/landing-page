@@ -15,6 +15,7 @@
 .title h2 {
   font-size: 2rem;
   color: var(--text-color);
+  margin-top: 1rem;
 }
 
 .contact {
@@ -76,6 +77,7 @@
 .addressTitle {
   text-align: center;
   font-size: 1.8rem;
+  margin-top: 0;
 }
 
 .addressGrid {
