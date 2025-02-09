@@ -4,13 +4,8 @@ export default function Home() {
   return (
     <div>
       <main className={styles.container}>
-        <section className={styles.title}>
-          <h1>Prêt à économiser sur vos assurances ?</h1>
-          <p>Obtenez votre devis dès maintenant !</p>
-        </section>
-
         <section className={styles.cabinetInfo}>
-          <h2>Le cabinet</h2>
+          <h1>Le cabinet</h1>
           <p>
             Doté d’une expérience de plus de 8 ans dans les activités
             d’assurance, Julien Plichta a fondé le cabinet JP Insurance, dans le
