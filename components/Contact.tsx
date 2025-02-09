@@ -23,7 +23,7 @@ export default function Contact() {
     <div>
       <main className={styles.container}>
         <section className={styles.title}>
-          <h1>Contactez-nous</h1>
+          <h2>Contactez-nous</h2>
         </section>
 
         <section className={styles.contact}>
