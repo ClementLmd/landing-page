@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "../styles/Particulier.module.css";
 import Item from "./Item";
 
@@ -66,15 +65,6 @@ export default function Particulier() {
 
   return (
     <div>
-      <Head>
-        <title>Assurance du Particulier - JP Insurance</title>
-        <meta
-          name="description"
-          content="Découvrez nos solutions d'assurance pour les particuliers."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.container}>
         <section className={styles.section}>
           <h2 className={styles.title}>

@@ -1,26 +1,11 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Le Cabinet - JP Insurance</title>
-        <meta
-          name="description"
-          content="Découvrez le cabinet JP Insurance et ses services d'assurance."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.container}>
-        <section className={styles.title}>
-          <h1>Prêt à économiser sur vos assurances ?</h1>
-          <p>Obtenez votre devis dès maintenant !</p>
-        </section>
-
         <section className={styles.cabinetInfo}>
-          <h2>Le cabinet</h2>
+          <h1>Le cabinet</h1>
           <p>
             Doté d’une expérience de plus de 8 ans dans les activités
             d’assurance, Julien Plichta a fondé le cabinet JP Insurance, dans le

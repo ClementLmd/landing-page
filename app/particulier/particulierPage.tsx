@@ -1,4 +1,4 @@
-import Particulier from "../components/Particulier";
+import Particulier from "components/Particulier";
 
 function ParticulierPage() {
   return <Particulier />;
