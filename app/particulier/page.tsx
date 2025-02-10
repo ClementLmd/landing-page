@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Découvrez nos solutions d'assurance pour les particuliers.",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "JP Insurance Logo",

@@ -7,7 +7,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Cabinet Assurance",
+  title: "JP Insurance",
   description: "Cabinet de courtage en assurance",
   icons: {
     icon: "/favicon.png",
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Cabinet Assurance",
+    title: "JP Insurance",
     description: "Cabinet de courtage en assurance",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "JP Insurance Logo",
