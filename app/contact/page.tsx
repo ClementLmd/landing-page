@@ -5,12 +5,19 @@ export const metadata: Metadata = {
   title: "Contact - JP Insurance",
   description: "Informations de contact du cabinet JP Insurance",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/favicon.png",
   },
   openGraph: {
     title: "Contact - JP Insurance",
     description: "Informations de contact du cabinet JP Insurance",
-    images: ["/images/logo.jpg"],
+    images: [
+      {
+        url: "/images/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JP Insurance Logo",
+      },
+    ],
   },
 };
 

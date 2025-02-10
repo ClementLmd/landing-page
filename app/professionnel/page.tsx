@@ -5,12 +5,19 @@ export const metadata: Metadata = {
   title: "Assurance du Professionnel - JP Insurance",
   description: "Découvrez nos solutions d'assurance pour les professionnels.",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/favicon.png",
   },
   openGraph: {
     title: "Assurance du Professionnel - JP Insurance",
     description: "Découvrez nos solutions d'assurance pour les professionnels.",
-    images: ["/images/logo.jpg"],
+    images: [
+      {
+        url: "/images/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JP Insurance Logo",
+      },
+    ],
   },
 };
 
