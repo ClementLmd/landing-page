@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Cabinet Assurance",
   description: "Cabinet de courtage en assurance",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/favicon.png",
   },
   robots: {
     index: true,

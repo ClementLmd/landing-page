@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Contact - JP Insurance",
   description: "Informations de contact du cabinet JP Insurance",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/favicon.png",
   },
   openGraph: {
     title: "Contact - JP Insurance",
