@@ -1,68 +1,115 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "../styles/NavBar.module.css";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const openMenu = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      !(event.target as Element).closest(`.${styles.menuItems}`) &&
-      !(event.target as Element).closest(`.${styles.burger}`)
-    ) {
-      setMenuOpen(false);
-    }
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
-  useEffect(() => {
-    if (menuOpen) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [menuOpen]);
+  const navLinks = [
+    { href: "/", label: "Le Cabinet" },
+    { href: "/professionnel", label: "Assurance Professionnel" },
+    { href: "/particulier", label: "Assurance Particulier" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
-    <nav className={styles.navbar}>
-      <Link href="/">
-        <img className={styles.logo} src="/images/logo.jpg" alt="logo" />
-      </Link>
-      <div className={styles.menuItems}>
-        <ul onClick={openMenu} className={menuOpen ? `${styles.active}` : ""}>
-          <li className={pathname === "/" ? styles.activeLink : ""}>
-            <Link href="/">Le Cabinet</Link>
-          </li>
-          <li
-            className={pathname === "/professionnel" ? styles.activeLink : ""}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        scrolled
+          ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-slate-700/50"
+          : "bg-transparent border-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-center space-x-3 group"
+            onClick={closeMenu}
           >
-            <Link href="/professionnel">Assurance du Professionnel</Link>
-          </li>
-          <li className={pathname === "/particulier" ? styles.activeLink : ""}>
-            <Link href="/particulier">Assurance du Particulier</Link>
-          </li>
-          <li className={pathname === "/contact" ? styles.activeLink : ""}>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
+            <img
+              src="/images/logo.jpg"
+              alt="JP Insurance Logo"
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  pathname === link.href
+                    ? "bg-primary-600 text-white shadow-lg shadow-primary-600/50"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <FontAwesomeIcon
+              icon={menuOpen ? faX : faBars}
+              className="w-6 h-6"
+            />
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-slate-900/95 backdrop-blur-md ${
+            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="py-4 space-y-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                  pathname === link.href
+                    ? "bg-primary-600 text-white shadow-lg"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
-      <FontAwesomeIcon
-        icon={faBars}
-        className={styles.burger}
-        onClick={openMenu}
-      />
     </nav>
   );
 }
