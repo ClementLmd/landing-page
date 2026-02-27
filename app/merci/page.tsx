@@ -1,14 +1,21 @@
 import Link from "next/link";
+import { Metadata } from "next";
 
-export default function NotFound() {
+export const metadata: Metadata = {
+  title: "Message envoyé - JP Insurance",
+  description: "Votre demande a bien été envoyée.",
+};
+
+export default function MerciPage() {
   return (
     <main className="flex-1 flex flex-col items-center justify-center bg-white pt-24 pb-12 px-4">
       <div className="container-custom text-center max-w-lg mx-auto">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-navy mb-3">
-          Page introuvable
+        <h1 className="font-display text-3xl md:text-4xl font-bold text-navy mb-3">
+          Message envoyé
         </h1>
         <p className="text-muted text-lg mb-8">
-          La page que vous recherchez n&apos;existe pas ou a été déplacée.
+          Votre demande a bien été reçue. Nous vous recontacterons dans les
+          meilleurs délais.
         </p>
         <Link
           href="/"
