@@ -15,7 +15,7 @@ export default function RootLayout({
       <body>
         <div className="layout">
           <Navbar />
-          <div className="content">{children}</div>
+          {children}
           <Analytics />
           <Footer />
         </div>

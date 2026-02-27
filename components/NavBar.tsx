@@ -1,83 +1,115 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
+const HEADER_OFFSET_PX = 112;
+const CONTACT_OFFSET_PX = 140; /* extra offset so form is visible */
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const navLinks = isHome
+    ? [
+        { href: "#cabinet", label: "Le cabinet" },
+        { href: "#solutions", label: "Solutions" },
+        { href: "#process", label: "Méthode" },
+      ]
+    : [
+        { href: "/#cabinet", label: "Le cabinet" },
+        { href: "/#solutions", label: "Solutions" },
+        { href: "/#process", label: "Méthode" },
+      ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
     setMenuOpen(false);
-  };
+  }, [pathname]);
 
-  const navLinks = [
-    { href: "/", label: "Le Cabinet" },
-    { href: "/professionnel", label: "Assurance Professionnel" },
-    { href: "/particulier", label: "Assurance Particulier" },
-    { href: "/contact", label: "Contact" },
-  ];
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    const id = href.replace(/^.*#/, "");
+    if (!id || !isHome) return;
+    e.preventDefault();
+    closeMenu();
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const offset =
+            id === "contact" ? CONTACT_OFFSET_PX : HEADER_OFFSET_PX;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+        }
+      }, 150);
+    });
+  };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        scrolled
-          ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-slate-700/50"
-          : "bg-transparent border-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+    <nav className="sticky top-0 z-10 bg-white/82 backdrop-blur-md border-b border-line saturate-[1.4]">
+      <div className="container-custom px-4">
+        <div className="flex items-center justify-between py-3 gap-4">
           <Link
             href="/"
-            className="flex items-center space-x-3 group"
+            className="flex items-center gap-3 min-w-[200px] lg:min-w-[240px]"
             onClick={closeMenu}
           >
             <img
-              src="/images/logo.jpg"
-              alt="JP Insurance Logo"
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              src="/images/logo.jpeg"
+              alt="JP Insurance"
+              className="h-10 w-auto block"
             />
+            <div>
+              <div className="font-bold tracking-wider text-[13px] text-navy">
+                JP INSURANCE
+              </div>
+              <div className="text-xs text-muted mt-0.5">
+                Courtage en assurance • France entière
+              </div>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex gap-4 items-center text-muted text-sm">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  pathname === link.href
-                    ? "bg-primary-600 text-white shadow-lg shadow-primary-600/50"
-                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
-                }`}
+                className="no-underline hover:text-ink transition-colors"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          <div className="hidden md:flex gap-2 items-center">
+            <a
+              href="tel:+33684853528"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-[14px] font-bold text-sm bg-panel border border-line hover:shadow-card hover:-translate-y-px transition-all"
+              title="Appeler"
+            >
+              📞 Appeler
+            </a>
+            <a
+              href={isHome ? "#contact" : "/#contact"}
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-[14px] font-semibold text-sm bg-navy text-white border border-transparent hover:bg-navy-light hover:-translate-y-px hover:shadow-card transition-all"
+            >
+              📅 Prendre RDV
+            </a>
+          </div>
+
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 rounded-lg text-ink hover:bg-panel transition-colors"
+            aria-label="Menu"
           >
             <FontAwesomeIcon
               icon={menuOpen ? faX : faBars}
@@ -85,29 +117,40 @@ export default function Navbar() {
             />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-slate-900/95 backdrop-blur-md ${
-            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="py-4 space-y-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={closeMenu}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
-                  pathname === link.href
-                    ? "bg-primary-600 text-white shadow-lg"
-                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-white border-t border-line ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="py-4 px-4 space-y-2">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleAnchorClick(e, link.href)}
+              className="block py-3 rounded-lg text-base font-medium text-ink hover:bg-panel"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="tel:+33684853528"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-2 py-3 rounded-lg text-base font-medium text-ink bg-panel hover:bg-line/50 transition-colors"
+          >
+            📞 Appeler
+          </a>
+          <a
+            href={isHome ? "#contact" : "/#contact"}
+            onClick={(e) =>
+              handleAnchorClick(e, isHome ? "#contact" : "/#contact")
+            }
+            className="block py-3 rounded-lg text-base font-semibold bg-navy text-white text-center"
+          >
+            📅 Prendre RDV
+          </a>
         </div>
       </div>
     </nav>

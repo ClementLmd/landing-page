@@ -91,80 +91,82 @@ export default function Professionnel() {
   ];
 
   return (
-    <main className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <section className="max-w-4xl mx-auto text-center mb-20">
-        <div className="mb-6 inline-block">
-          <span className="px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full text-sm font-medium border border-primary-600/30">
-            Assurance Professionnel
-          </span>
-        </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-          Protégez votre activité professionnelle
-        </h1>
-        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Des solutions d'assurance adaptées à votre entreprise pour vous
-          permettre de vous concentrer sur votre activité en toute sérénité.
-        </p>
-      </section>
-
-      {/* Section: Protéger vos biens */}
-      <section className="max-w-7xl mx-auto mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Protéger vos biens
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {itemsDataGoods.map((item, index) => (
-            <Item
-              key={index}
-              image={item.image}
-              title={item.title}
-              text={item.text}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Section: Vous protéger */}
-      <section className="max-w-7xl mx-auto mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Vous protéger
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {itemsDataProtection.map((item, index) => (
-            <Item
-              key={index}
-              image={item.image}
-              title={item.title}
-              text={item.text}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="max-w-4xl mx-auto mt-20 text-center">
-        <div className="bg-gradient-to-r from-slate-800/50 to-slate-800/30 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-700/50">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Un accompagnement sur mesure pour votre entreprise
-          </h2>
-          <p className="text-slate-300 mb-8 text-lg">
-            Contactez-nous pour une étude personnalisée de vos besoins
+    <main className="min-h-screen bg-white pt-24 pb-12">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="max-w-4xl mx-auto text-center mb-20">
+          <div className="mb-6 inline-block">
+            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold border border-accent/20">
+              Assurance Professionnel
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-navy">
+            Protégez votre activité professionnelle
+          </h1>
+          <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            Des solutions d&apos;assurance adaptées à votre entreprise pour vous
+            permettre de vous concentrer sur votre activité en toute sérénité.
           </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold shadow-lg shadow-primary-600/50 hover:shadow-xl hover:shadow-primary-600/50 hover:scale-105 transition-all duration-300"
-          >
-            Nous contacter
-          </a>
-        </div>
-      </section>
+        </section>
+
+        {/* Section: Protéger vos biens */}
+        <section className="max-w-7xl mx-auto mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-navy">
+              Protéger vos biens
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {itemsDataGoods.map((item, index) => (
+              <Item
+                key={index}
+                image={item.image}
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Section: Vous protéger */}
+        <section className="max-w-7xl mx-auto mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-navy">
+              Vous protéger
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {itemsDataProtection.map((item, index) => (
+              <Item
+                key={index}
+                image={item.image}
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="max-w-4xl mx-auto mt-20 text-center">
+          <div className="bg-panel rounded-card p-8 md:p-12 border border-line">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-navy">
+              Un accompagnement sur mesure pour votre entreprise
+            </h2>
+            <p className="text-muted mb-8 text-lg">
+              Contactez-nous pour une étude personnalisée de vos besoins
+            </p>
+            <a
+              href="/contact"
+              className="inline-block px-8 py-4 bg-navy text-white rounded-xl font-semibold hover:bg-navy-light hover:scale-105 transition-all duration-300"
+            >
+              Nous contacter
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
