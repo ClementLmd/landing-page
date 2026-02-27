@@ -7,6 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        navy: {
+          DEFAULT: "#0D1B2A",
+          light: "#13253A",
+        },
+        ink: "#1B263B",
+        muted: "#5B6777",
+        panel: "#F4F6F8",
+        line: "#E6E9EE",
+        accent: "#2A4B7C",
         primary: {
           50: "#f0f9ff",
           100: "#e0f2fe",
@@ -21,8 +30,15 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["Montserrat", "system-ui", "sans-serif"],
+        display: ["Playfair Display", "serif"],
+      },
+      borderRadius: {
+        card: "18px",
+      },
+      boxShadow: {
+        card: "0 16px 40px rgba(13,27,42,.10)",
+        cta: "0 22px 50px rgba(13,27,42,.20)",
       },
     },
   },

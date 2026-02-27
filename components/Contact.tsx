@@ -18,34 +18,33 @@ export default function Contact() {
   ];
 
   return (
-    <main className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <section className="max-w-4xl mx-auto text-center mb-16">
-        <div className="mb-6 inline-block">
-          <span className="px-4 py-2 bg-primary-600/20 text-primary-400 rounded-full text-sm font-medium border border-primary-600/30">
-            Contact
-          </span>
-        </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-          Contactez-nous
-        </h1>
-        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Une question ? Un projet ? N'hésitez pas à nous contacter, nous
-          serons ravis de vous accompagner.
-        </p>
-      </section>
+    <main className="min-h-screen bg-white pt-24 pb-12">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="max-w-4xl mx-auto text-center mb-16">
+          <div className="mb-6 inline-block">
+            <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold border border-accent/20">
+              Contact
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-navy">
+            Contactez-nous
+          </h1>
+          <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            Une question ? Un projet ? N&apos;hésitez pas à nous contacter, nous
+            serons ravis de vous accompagner.
+          </p>
+        </section>
 
-      {/* Contact Information */}
-      <section className="max-w-6xl mx-auto mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {/* Phone */}
-          <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-primary-400 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
-            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-primary-500/50 transition-all duration-300">
+        {/* Contact Information */}
+        <section className="max-w-6xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {/* Phone */}
+            <div className="bg-white rounded-card p-8 border border-line shadow-card hover:border-accent/40 transition-all">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-primary-600/20 rounded-lg">
+                <div className="p-3 bg-accent/10 rounded-lg">
                   <svg
-                    className="w-6 h-6 text-primary-400"
+                    className="w-6 h-6 text-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -58,27 +57,24 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-white">
+                <h3 className="text-xl font-display font-semibold text-navy">
                   Téléphone
                 </h3>
               </div>
               <a
                 href="tel:+33684853528"
-                className="text-primary-400 hover:text-primary-300 text-lg font-medium transition-colors"
+                className="text-accent hover:text-navy text-lg font-medium transition-colors"
               >
                 06 84 85 35 28
               </a>
             </div>
-          </div>
 
-          {/* Email */}
-          <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-primary-400 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
-            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-primary-500/50 transition-all duration-300">
+            {/* Email */}
+            <div className="bg-white rounded-card p-8 border border-line shadow-card hover:border-accent/40 transition-all">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-primary-600/20 rounded-lg">
+                <div className="p-3 bg-accent/10 rounded-lg">
                   <svg
-                    className="w-6 h-6 text-primary-400"
+                    className="w-6 h-6 text-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -91,103 +87,103 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-white">
+                <h3 className="text-xl font-display font-semibold text-navy">
                   Email
                 </h3>
               </div>
               <a
                 href="mailto:contact@jpassurances.fr"
-                className="text-primary-400 hover:text-primary-300 text-lg font-medium transition-colors break-all"
+                className="text-accent hover:text-navy text-lg font-medium transition-colors break-all"
               >
                 contact@jpassurances.fr
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Offices */}
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
-            Nos bureaux
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {addresses.map((addr, index) => (
-              <div
-                key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-primary-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/20 hover:-translate-y-1"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="p-2 bg-primary-600/20 rounded-lg">
-                    <svg
-                      className="w-5 h-5 text-primary-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+          {/* Offices */}
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center text-navy">
+              Nos bureaux
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {addresses.map((addr, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-card p-6 border border-line shadow-card hover:border-accent/40 hover:shadow-cta hover:-translate-y-1 transition-all"
+                >
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="p-2 bg-accent/10 rounded-lg">
+                      <svg
+                        className="w-5 h-5 text-accent"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-display font-bold text-navy">
+                      {addr.city}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-display font-bold text-white">
-                    {addr.city}
-                  </h3>
+                  <p className="text-muted mb-1">{addr.address}</p>
+                  <p className="text-muted">{addr.postal}</p>
                 </div>
-                <p className="text-slate-300 mb-1">{addr.address}</p>
-                <p className="text-slate-400">{addr.postal}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Legal Mentions */}
-      <section className="max-w-4xl mx-auto">
-        <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-slate-700/50">
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-center">
-            Mentions légales
-          </h2>
-          <div className="space-y-4 text-slate-300 leading-relaxed">
-            <p>
-              Le cabinet JP INSURANCE sis 5 Rue Fénélon 33000 Bordeaux est
-              enregistré au RCS BORDEAUX n° 980 140 370, et au registre
-              d'immatriculation d'intermédiaire d'assurance ORIAS sous le n°
-              24000001 (cette immatriculation peut être vérifiée sur le site{" "}
-              <a
-                href="https://www.orias.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 underline"
-              >
-                www.orias.fr
-              </a>
-              ).
-            </p>
-            <p>
-              En cas de réclamation ou de contestation de votre part, nous vous
-              invitons à vous adresser au cabinet ; vous pouvez également
-              contacter l'Autorité de contrôle prudentiel et de Résolution
-              (ACPR) : 61 rue Taitbout 75009 Paris.
-            </p>
-            <p className="pt-4 border-t border-slate-700/50">
-              <strong className="text-white">JP INSURANCE</strong>
-              <br />
-              5 RUE FENELON 33000 BORDEAUX
-              <br />
-              06.84.85.35.28
-            </p>
+        {/* Legal Mentions */}
+        <section id="mentions-legales" className="max-w-4xl mx-auto scroll-mt-32 lg:scroll-mt-24">
+          <div className="bg-panel rounded-card p-8 md:p-12 border border-line">
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-center text-navy">
+              Mentions légales
+            </h2>
+            <div className="space-y-4 text-muted leading-relaxed">
+              <p>
+                Le cabinet JP INSURANCE sis 5 Rue Fénélon 33000 Bordeaux est
+                enregistré au RCS BORDEAUX n° 980 140 370, et au registre
+                d&apos;immatriculation d&apos;intermédiaire d&apos;assurance ORIAS sous le n°
+                24000001 (cette immatriculation peut être vérifiée sur le site{" "}
+                <a
+                  href="https://www.orias.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-navy underline"
+                >
+                  www.orias.fr
+                </a>
+                ).
+              </p>
+              <p>
+                En cas de réclamation ou de contestation de votre part, nous vous
+                invitons à vous adresser au cabinet ; vous pouvez également
+                contacter l&apos;Autorité de contrôle prudentiel et de Résolution
+                (ACPR) : 61 rue Taitbout 75009 Paris.
+              </p>
+              <p className="pt-4 border-t border-line text-ink">
+                <strong className="text-navy">JP INSURANCE</strong>
+                <br />
+                5 RUE FENELON 33000 BORDEAUX
+                <br />
+                06.84.85.35.28
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }
