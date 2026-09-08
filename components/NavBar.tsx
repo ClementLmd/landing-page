@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -63,9 +64,11 @@ export default function Navbar() {
             className="flex items-center gap-3 min-w-[200px] lg:min-w-[240px]"
             onClick={closeMenu}
           >
-            <img
+            <Image
               src="/images/logo.jpeg"
               alt="JP Insurance"
+              width={500}
+              height={500}
               className="h-10 w-auto block"
             />
             <div>
